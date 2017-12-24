@@ -18,6 +18,14 @@
                 <input type="password" class="form-control" id="secret" placeholder="Enter a New Secret">
             </div>
             <div class="col-xs-4">
+                <select class="form-control" id="secret_type">
+                    <option value='totp'>TOTP</option>
+                    <option value='hotp'>HOTP</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-4">
                 <button type="submit" class="btn btn-default">Submit</button>
             </div>
         </div>

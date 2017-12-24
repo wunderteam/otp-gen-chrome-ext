@@ -6,7 +6,9 @@ $(document).ready(function() {
     }
 
     // Get the latest OTP code
-    $("#otp").text(KeyUtils.getOTP());
+    if (KeyUtils.getSecretType() == 'totp') {
+        $("#otp").text(KeyUtils.getOTP());
+    }
 
     var clipboard = new Clipboard('.btn');
     clipboard.on('success', function(e) {
@@ -15,6 +17,7 @@ $(document).ready(function() {
 
     // Allow token to be manually refreshed
     $("#refresh_button").click(function() {
+        KeyUtils.advanceCounter();
         $("#otp").text(KeyUtils.getOTP());
     });
 
