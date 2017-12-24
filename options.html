@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="scripts/lib/jquery.min.js"></script>
     <script src="scripts/lib/bootstrap.min.js"></script>
-    <script src="scripts/lib/base32-to-base64.js"></script>
     <script src="scripts/options.js"></script>
 </head>
 
@@ -18,6 +17,14 @@
             <div class="col-xs-8">
                 <input type="password" class="form-control" id="secret" placeholder="Enter a New Secret">
             </div>
+            <div class="col-xs-4">
+                <select class="form-control" id="secret_type">
+                    <option value='totp'>TOTP</option>
+                    <option value='hotp'>HOTP</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
             <div class="col-xs-4">
                 <button type="submit" class="btn btn-default">Submit</button>
             </div>

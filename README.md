@@ -1,12 +1,14 @@
 # Basic OTP Token Generator Chrome Extension
-A Chrome extension for generating [HOTP](https://en.wikipedia.org/wiki/HMAC-based_One-time_Password_Algorithm) tokens for a single secret.
+A Chrome extension for generating [HOTP](https://en.wikipedia.org/wiki/HMAC-based_One-time_Password_Algorithm) and [TOTP](https://en.wikipedia.org/wiki/Time-based_One-time_Password_Algorithm) tokens for a single secret.
 
 ![Popup](/screenshots/ext_popup.png)
 
 ## SETUP
-Submit the HOTP secret key in the options popup:
+Submit the secret key in the options popup:
 
 ![Options Popup](/screenshots/ext_options.png)
+
+(Typically this key will be Base32 encoded)
 
 ## USAGE
 
@@ -38,7 +40,6 @@ Default 'Paste OTP Token' HotKey: <i>Alt+T</i>
 
 ## Future Work
 
-* Support TOTP. 
 * CRUD for multiple tokens.
 
 ## Contact
