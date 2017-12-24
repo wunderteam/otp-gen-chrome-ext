@@ -14,8 +14,6 @@ KeyUtils.advanceCounter = function() {
 };
 
 KeyUtils.getOTP = function() {
-    var otp = window.otplib;
-    return hotp(KeyUtils.getSecret(), KeyUtils.getCounter(), "dec6");
+    var otp = window.OTP({secret: KeyUtils.getSecret()});
+    return otp.totp();
 };
-
-
